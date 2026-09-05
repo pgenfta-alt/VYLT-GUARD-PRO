@@ -6,7 +6,7 @@
  * (Never exposed to browser clients or public GitHub repositories!)
  */
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // Only allow POST
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
@@ -31,4 +31,4 @@ export default async function handler(req, res) {
     // Fail gracefully so user signup is never interrupted
     return res.status(200).json({ status: 'error', error: err.message });
   }
-}
+};
