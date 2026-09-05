@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811" />
+      <stop offset="50%" stop-color="#080e1d" />
+      <stop offset="100%" stop-color="#04060c" />
+    </linearGradient>
+
+    <!-- Radial Cyber Aura -->
+    <radialGradient id="cyberAura" cx="30%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(56, 189, 248, 0.18)" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#cyberAura)" />
+
+  <!-- Grid Lines -->
+  <g stroke="rgba(255, 255, 255, 0.03)" stroke-width="1">
+    <line x1="0" y1="105" x2="1200" y2="105" />
+    <line x1="0" y1="210" x2="1200" y2="210" />
+    <line x1="0" y1="315" x2="1200" y2="315" />
+    <line x1="0" y1="420" x2="1200" y2="420" />
+    <line x1="0" y1="525" x2="1200" y2="525" />
+    <line x1="200" y1="0" x2="200" y2="630" />
+    <line x1="400" y1="0" x2="400" y2="630" />
+    <line x1="600" y1="0" x2="600" y2="630" />
+    <line x1="800" y1="0" x2="800" y2="630" />
+    <line x1="1000" y1="0" x2="1000" y2="630" />
+  </g>
+
+  <!-- Left: Cyber Shield Logo -->
+  <g transform="translate(140, 155) scale(0.65)">
+    <!-- Dark Shield Base with Cyber Glow -->
+    <path d="M 256 32 L 440 96 C 440 280, 360 416, 256 480 C 152 416, 72 280, 72 96 Z" 
+          fill="#0c1427" 
+          stroke="url(#shieldGrad)" 
+          stroke-width="18" />
+    
+    <!-- Concentric Inner -->
+    <path d="M 256 72 L 404 124 C 404 270, 338 380, 256 432 C 174 380, 108 270, 108 124 Z" 
+          fill="none" 
+          stroke="rgba(56, 189, 248, 0.3)" 
+          stroke-width="8" 
+          stroke-dasharray="14 10" />
+
+    <!-- Padlock -->
+    <path d="M 206 230 V 185 A 50 50 0 0 1 306 185 V 230" fill="none" stroke="#38bdf8" stroke-width="22" stroke-linecap="round" />
+    <rect x="186" y="230" width="140" height="110" rx="22" fill="#070b14" stroke="#38bdf8" stroke-width="12" />
+    <circle cx="256" cy="275" r="14" fill="#38bdf8" />
+    <polygon points="250,275 262,275 266,310 246,310" fill="#38bdf8" />
+  </g>
+
+  <!-- Right: Branding & Typography -->
+  <g transform="translate(540, 195)">
+    <!-- Security Badge -->
+    <rect x="0" y="0" width="280" height="36" rx="18" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.3)" stroke-width="1.5" />
+    <circle cx="20" cy="18" r="5" fill="#34d399" />
+    <text x="36" y="23" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" fill="#34d399" letter-spacing="1">ZERO-KNOWLEDGE CSPRNG</text>
+
+    <!-- Main Title -->
+    <text x="0" y="95" font-family="-apple-system, sans-serif" font-size="64" font-weight="900" fill="url(#brandGrad)" letter-spacing="-1.5">
+      VYLT GUARD PRO
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="145" font-family="-apple-system, sans-serif" font-size="24" font-weight="600" fill="#94a3b8" letter-spacing="0.5">
+      Cryptographic Security &amp; Password Suite
+    </text>
+
+    <!-- Feature Badges -->
+    <g transform="translate(0, 190)">
+      <rect x="0" y="0" width="165" height="40" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(56,189,248,0.25)" />
+      <text x="14" y="25" font-family="-apple-system, monospace" font-size="14" font-weight="700" fill="#38bdf8">100% Collision-Free</text>
+
+      <rect x="180" y="0" width="165" height="40" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(99,102,241,0.25)" />
+      <text x="194" y="25" font-family="-apple-system, monospace" font-size="14" font-weight="700" fill="#818cf8">Shannon Entropy</text>
+
+      <rect x="360" y="0" width="165" height="40" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(52,211,153,0.25)" />
+      <text x="376" y="25" font-family="-apple-system, monospace" font-size="14" font-weight="700" fill="#34d399">Air-Gapped Vault</text>
+    </g>
+  </g>
+</svg>
